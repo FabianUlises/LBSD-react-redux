@@ -3,7 +3,7 @@
     padding: 0; */
     box-sizing: border-box;
 }
-button {
+/* button {
     cursor: pointer;
 }
 .app {
@@ -14,4 +14,4 @@ button {
     display: flex;
     flex-direction: column;
     max-inline-size: 100%;
-}
+} */

@@ -2,14 +2,11 @@
 const valueEl = document.getElementById('value');
 const plusBtn = document.getElementById('plus');
 const minusBtn = document.getElementById('minus');
-const plusFive = document.querySelector('#plusFive');
-const minusFive = document.querySelector('#minusFive');
-const incrementAsync = document.querySelector('#incrementAsync');
-const incrementOdd = document.querySelector('#incrementOdd');
+const plusFiveBtn = document.querySelector('#plusFive');
+const minusFiveBtn = document.querySelector('#minusFive');
+const incrementAsyncBtn = document.querySelector('#incrementAsync');
+const incrementOddBtn = document.querySelector('#incrementOdd');
 
-minusFive.addEventListener('click', () => {
-  console.log('button clicked');
-});
 // initial state value
 const initialState = {
     value: 0
@@ -22,6 +19,10 @@ const counterReducer = (state = initialState, action) => {
             return { value: state.value + 1 }
         case 'counter/decremented':
             return { value: state.value - 1 }
+        case 'counter/incrementFive':
+            return { value: state.value + 5 }
+        case 'counter/decrementFive':
+            return { value: state.value - 5 }
         default:
         return state
     }
@@ -35,7 +36,12 @@ const addAction = {
 const subAction = {
   type: 'counter/decremented'
 }
-
+const addFiveAction = {
+  type: 'counter/incrementFive'
+}
+const subFiveAction = {
+  type: 'counter/decrementFive'
+}
 // generating the store
 let store = Redux.createStore(counterReducer)
 
@@ -49,15 +55,21 @@ const render = () => {
 const addOne = () => {
   store.dispatch(addAction)
 }
-
 const subOne = () => {
-  store.dispatch(subAction)
+  store.dispatch(subAction);
 }
+const addFive = () => {
+  store.dispatch(addFiveAction);
+};
+const subFive = () => {
+  store.dispatch(subFiveAction);
+};
 
 // event listeners
-plusBtn.addEventListener('click', addOne)
-minusBtn.addEventListener('click', subOne)
-
+plusBtn.addEventListener('click', addOne);
+minusBtn.addEventListener('click', subOne);
+plusFiveBtn.addEventListener('click', addFive);
+minusFiveBtn.addEventListener('click', subFive);
 // initial render
 render()
 
