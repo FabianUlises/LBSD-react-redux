@@ -1,8 +1,15 @@
 // DOM elements
-const valueEl = document.getElementById('value')
-const plusBtn = document.getElementById('plus')
-const minusBtn = document.getElementById('minus')
+const valueEl = document.getElementById('value');
+const plusBtn = document.getElementById('plus');
+const minusBtn = document.getElementById('minus');
+const plusFive = document.querySelector('#plusFive');
+const minusFive = document.querySelector('#minusFive');
+const incrementAsync = document.querySelector('#incrementAsync');
+const incrementOdd = document.querySelector('#incrementOdd');
 
+minusFive.addEventListener('click', () => {
+  console.log('button clicked');
+});
 // initial state value
 const initialState = {
     value: 0

@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width">
     <title>Explore Redux</title>
     <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1 id="value"></h1>
-    <div>
-      <button id="plus">+</button>
-      <button id="minus">-</button>
+    <div class="app">
+      <h1 id="value"></h1>
+      <div>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+      </div>
+      <div class="input-container">
+        <input type="number" name="number" id="numberInput">
+      </div>
+      <div class="buttons">
+        <button type="button"  id="plusFive">+5</button>
+        <button type="button" id="minusFive">-5</button>
+      </div>
+      <div class="custom-buttons">
+        <button type="button" id="incrementOdd">Increment if Odd</button>
+        <button type="button" id="incrementAsync">Increment async</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

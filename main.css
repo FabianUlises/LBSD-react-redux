@@ -1,0 +1,17 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+button {
+    cursor: pointer;
+}
+.app {
+    inline-size: 100%;
+    max-inline-size: 150px;
+}
+.custom-buttons {
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 100%;
+}
