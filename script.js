@@ -64,12 +64,18 @@ const addFive = () => {
 const subFive = () => {
   store.dispatch(subFiveAction);
 };
+const incrementIfOdd = () => {
+  if(store.getState().value % 2 !== 0) {
+    store.dispatch(addAction);
+  }
+}
 
 // event listeners
 plusBtn.addEventListener('click', addOne);
 minusBtn.addEventListener('click', subOne);
 plusFiveBtn.addEventListener('click', addFive);
 minusFiveBtn.addEventListener('click', subFive);
+incrementOddBtn.addEventListener('click', incrementIfOdd);
 // initial render
 render()
 
