@@ -68,14 +68,19 @@ const incrementIfOdd = () => {
   if(store.getState().value % 2 !== 0) {
     store.dispatch(addAction);
   }
-}
-
+};
+const incrementAsync = () => {
+  setTimeout(() => {
+    store.dispatch(addAction);
+  }, 1000);
+};
 // event listeners
 plusBtn.addEventListener('click', addOne);
 minusBtn.addEventListener('click', subOne);
 plusFiveBtn.addEventListener('click', addFive);
 minusFiveBtn.addEventListener('click', subFive);
 incrementOddBtn.addEventListener('click', incrementIfOdd);
+incrementAsyncBtn.addEventListener('click', incrementAsync);
 // initial render
 render()
 
